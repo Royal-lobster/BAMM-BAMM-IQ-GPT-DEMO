@@ -1,7 +1,7 @@
-import FAQSection from "./(home)/FAQ";
-import { Features } from "./(home)/Features";
-import { Hero } from "./(home)/Hero";
-import Testimonials from "./(home)/Testimonials";
+import FAQSection from "./_home/FAQ";
+import { Features } from "./_home/Features";
+import { Hero } from "./_home/Hero";
+import Testimonials from "./_home/Testimonials";
 
 export default function Home() {
 	return (
