@@ -25,6 +25,7 @@ export function Hero() {
 						alt="BAMM-BAMM"
 						width={500}
 						height={280}
+						className="w-[500px] h-[280px] object-contain"
 					/>
 				</div>
 			</div>
