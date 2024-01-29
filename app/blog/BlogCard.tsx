@@ -23,7 +23,7 @@ export const BlogCard = ({ title, excerpt, date, slug }: BlogCardProps) => {
 			</div>
 			<Link
 				href={`/blog/${slug}`}
-				className={buttonVariants({ variant: "link", class: "px-0" })}
+				className={buttonVariants({ variant: "secondary" })}
 			>
 				Read more
 			</Link>
