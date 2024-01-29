@@ -4,23 +4,10 @@ import matter from "gray-matter";
 import { BlogCard } from "./BlogCard";
 import path from "path";
 
-const postsDirectory = path.join(process.cwd(), "posts");
+export const POSTS_DIRECTORY = path.join(process.cwd(), "posts");
 
 const Blog = async () => {
-	const allBlogFiles = await readdir(postsDirectory, { recursive: false });
-
-	const posts = await Promise.all(
-		allBlogFiles.map(async (file) => {
-			const post = await readFile(path.join(postsDirectory, file));
-			const { data, content } = matter(post);
-			return {
-				title: data.title,
-				date: data.date,
-				slug: data.slug,
-				excerpt: `${content.slice(0, 140)}...`,
-			};
-		}),
-	);
+	const posts = await getAllPosts();
 
 	return (
 		<div>
@@ -38,6 +25,25 @@ const Blog = async () => {
 			</div>
 		</div>
 	);
+};
+
+const getAllPosts = async () => {
+	const allBlogFiles = await readdir(POSTS_DIRECTORY, { recursive: false });
+
+	const posts = await Promise.all(
+		allBlogFiles.map(async (file) => {
+			const post = await readFile(path.join(POSTS_DIRECTORY, file));
+			const { data, content } = matter(post);
+			return {
+				title: data.title,
+				date: data.date,
+				slug: data.slug,
+				excerpt: `${content.slice(0, 140)}...`,
+			};
+		}),
+	);
+
+	return posts;
 };
 
 export default Blog;
