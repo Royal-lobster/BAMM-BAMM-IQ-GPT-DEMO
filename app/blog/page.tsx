@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import { BlogCard } from "./BlogCard";
 import path from "path";
 
-export const POSTS_DIRECTORY = path.join(process.cwd(), "posts");
+const POSTS_DIRECTORY = path.join(process.cwd(), "posts");
 
 const Blog = async () => {
 	const posts = await getAllPosts();

@@ -1,11 +1,12 @@
 import React from "react";
-import { POSTS_DIRECTORY } from "../page";
 import path from "path";
 import { readFile } from "fs/promises";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import "@/app/blog/[slug]/markdown.css"
+
+const POSTS_DIRECTORY = path.join(process.cwd(), "posts");
 
 type PostPageProps = {
 	params: {
