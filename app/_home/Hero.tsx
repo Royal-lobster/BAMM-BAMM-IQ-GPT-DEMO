@@ -24,8 +24,8 @@ export function Hero() {
 						src="/images/hero.png"
 						alt="BAMM-BAMM"
 						width={500}
-						height={280}
-						className="w-[500px] h-[280px] object-contain"
+						height={386}
+						className="object-contain mx-auto"
 					/>
 				</div>
 			</div>
