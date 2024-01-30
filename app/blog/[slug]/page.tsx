@@ -20,7 +20,7 @@ const PostPage = async ({ params: { slug } }: PostPageProps) => {
 	const filteredPosts = posts.filter((p) => p.slug !== slug);
 
 	return (
-		<main className="max-w-6xl container mx-auto my-10 flex flex-col lg:flex-row gap-4 justify-between">
+		<main className="container mx-auto my-10 flex flex-col lg:flex-row gap-10 justify-between">
 			<article>
 				<h1 className="text-4xl font-bold mb-2">{post.title}</h1>
 				<div className="text-gray-500 text-sm mb-4">
@@ -32,14 +32,14 @@ const PostPage = async ({ params: { slug } }: PostPageProps) => {
 				</div>
 				<ReactMarkdown
 					remarkPlugins={[remarkGfm]}
-					className="prose prose-invert prose-gray"
+					className="prose prose-invert max-w-none prose-gray"
 				>
 					{post.content}
 				</ReactMarkdown>
 			</article>
 			<aside>
 				<h2 className="text-2xl font-bold mb-2">More Posts</h2>
-				<div className="max-w-[400px] rounded bg-gray-900 divide-y">
+				<div className="max-w-[400px] lg:w-[400px] rounded bg-gray-900 divide-y">
 					{filteredPosts.map((post) => (
 						<MorePostsCard
 							key={post.slug}
