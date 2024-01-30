@@ -20,7 +20,7 @@ const PostPage = async ({ params: { slug } }: PostPageProps) => {
 	const filteredPosts = posts.filter((p) => p.slug !== slug);
 
 	return (
-		<main className="container mx-auto my-10 flex gap-4 justify-between">
+		<main className="max-w-6xl mx-auto my-10 flex gap-4 justify-between">
 			<article>
 				<h1 className="text-4xl font-bold mb-2">{post.title}</h1>
 				<div className="text-gray-500 text-sm mb-4">
@@ -42,6 +42,7 @@ const PostPage = async ({ params: { slug } }: PostPageProps) => {
 				<div className="space-y-4 min-w-[400px] p-4 rounded bg-gray-900 divide-y">
 					{filteredPosts.map((post) => (
 						<MorePostsCard
+							key={post.slug}
 							title={post.title}
 							date={post.date}
 							slug={post.slug}
