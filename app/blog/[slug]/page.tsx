@@ -4,7 +4,7 @@ import { readFile, readdir } from "fs/promises";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import MorePostsCard from "./MorePostsCard";
+import MorePosts from "./MorePosts";
 
 const POSTS_DIRECTORY = path.join(process.cwd(), "posts");
 
@@ -38,17 +38,12 @@ const PostPage = async ({ params: { slug } }: PostPageProps) => {
 				</ReactMarkdown>
 			</article>
 			<aside>
-				<h2 className="text-2xl font-bold mb-2">More Posts</h2>
-				<div className="max-w-[400px] lg:w-[400px] rounded bg-gray-900 divide-y">
-					{filteredPosts.map((post) => (
-						<MorePostsCard
-							key={post.slug}
-							title={post.title}
-							date={post.date}
-							slug={post.slug}
-						/>
-					))}
-				</div>
+				<iframe
+					src={`https://iqgpt-js-embedding.vercel.app/?api-key=${process.env.IQGPT_API_KEY}`}
+					className="w-full h-96"
+					title="IQGPT JS Embedding"
+				/>
+				<MorePosts filteredPosts={filteredPosts} />
 			</aside>
 		</main>
 	);
