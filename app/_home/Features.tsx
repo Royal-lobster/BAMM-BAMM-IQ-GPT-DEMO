@@ -14,7 +14,7 @@ export const Features = () => {
 					<h2 className="text-center text-2xl md:text-3xl font-bold mb-4">
 						Why BAMM-BAMM? Because Normal is Boring!
 					</h2>
-					<p className="text-center text-lg text-gray-400">
+					<p className="text-center text-gray-400 mx-auto max-w-[800px]">
 						We're not just another token on the block(chain). We're the giggle
 						at your screen, the ROFL in your wallet. Discover the perks of being
 						memetastic with us.
@@ -37,8 +37,8 @@ export const Features = () => {
 							NFTs, But Make It Meme
 						</h3>
 						<p className="text-center text-gray-400 max-w-96">
-							Dank memes meet digital art, and they've never looked better. Buy,
-							sell, and trade the trendiest meme NFTs.
+							Dank memes meet digital art, and they've never looked better.
+							trade the trendiest meme NFTs.
 						</p>
 					</div>
 					<div className="flex-1 px-4 mb-8 flex flex-col items-center justify-center">

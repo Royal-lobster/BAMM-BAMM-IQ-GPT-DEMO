@@ -5,7 +5,7 @@ const Testimonials = () => {
 		<section className="py-12 bg-gray-900">
 			<div className="container mx-auto px-4">
 				<div className="text-center mb-12">
-					<h2 className="text-4xl font-bold mb-4">
+					<h2 className="text-2xl md:text-3xl font-bold mb-4">
 						Peep What the Meme Squad Thinks!
 					</h2>
 					<p className="text-lg text-gray-400">

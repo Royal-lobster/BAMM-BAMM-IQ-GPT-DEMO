@@ -10,10 +10,10 @@ export const FAQSection = () => {
 	return (
 		<div className="bg-gradient-to-b py-10 from-gray-900 to-gray-950">
 			<div className="container mx-auto px-4">
-				<h2 className="text-3xl font-bold text-center mb-6">
+				<h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
 					Frequently Asked (and Hilarious) Questions
 				</h2>
-				<Accordion type="single" collapsible>
+				<Accordion className="container mx-auto" type="single" collapsible>
 					<AccordionItem value="item1">
 						<AccordionTrigger>
 							Why did the meme cross the blockchain?

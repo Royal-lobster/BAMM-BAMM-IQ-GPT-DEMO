@@ -4,7 +4,7 @@ import React from "react";
 
 export const Footer = () => {
 	return (
-		<footer className="bg-gray-800 text-white">
+		<footer className="bg-gray-900 text-white">
 			<div className="container mx-auto px-4 py-10">
 				<div className="flex flex-col md:flex-row text-center md:text-left -mx-4 justify-between">
 					<div className="flex-1 max-w-[600px] px-4 mb-6 md:mb-0">
@@ -26,11 +26,13 @@ export const Footer = () => {
 								placeholder="Enter your email"
 								className="border-gray-700 text-center md:text-left"
 							/>
-							<Button type="submit">Subscribe</Button>
+							<Button type="submit" className="w-full" variant="secondary">
+								Subscribe
+							</Button>
 						</form>
 					</div>
 				</div>
-				<div className="text-center mt-10 border-t border-gray-700 pt-10">
+				<div className="text-center mt-10 border-t border-gray-800 pt-10">
 					<p className="text-gray-400">
 						&copy; {new Date().getFullYear()} BAMM-BAMM. All rights reserved.
 					</p>

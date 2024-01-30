@@ -4,7 +4,7 @@ import { readFile } from "fs/promises";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import "@/app/blog/[slug]/markdown.css"
+import "@/app/blog/[slug]/markdown.css";
 
 const POSTS_DIRECTORY = path.join(process.cwd(), "posts");
 
@@ -26,7 +26,12 @@ const PostPage = async ({ params: { slug } }: PostPageProps) => {
 					year: "numeric",
 				})}
 			</div>
-			<ReactMarkdown remarkPlugins={[remarkGfm]} className="markdown">{post.content}</ReactMarkdown>
+			<ReactMarkdown
+				remarkPlugins={[remarkGfm]}
+				className="markdown prose lg:prose-xl"
+			>
+				{post.content}
+			</ReactMarkdown>
 		</main>
 	);
 };
