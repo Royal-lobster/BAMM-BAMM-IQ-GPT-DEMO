@@ -33,8 +33,16 @@ export const Footer = () => {
 					</div>
 				</div>
 				<div className="text-center mt-10 border-t border-gray-800 pt-10">
-					<p className="text-gray-400">
-						&copy; {new Date().getFullYear()} BAMM-BAMM. All rights reserved.
+					<p className="text-gray-400 text-sm">
+						This is a dummy website for demonstration purposes only. Purpose
+						made to showcase{" "}
+						<a
+							className="hover:underline underline-offset-2"
+							href="https://iqgpt.com"
+						>
+							IQGPT.com
+						</a>{" "}
+						capabilities.
 					</p>
 				</div>
 			</div>
