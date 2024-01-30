@@ -9,11 +9,11 @@ type MorePostsCardProps = {
 
 const MorePostsCard = ({ title, date, slug }: MorePostsCardProps) => {
 	return (
-		<div>
-			<Link href={`/blog/${slug}`} className="text-lg font-bold my-2">
+		<div className="p-4">
+			<Link href={`/blog/${slug}`} className="font-semibold">
 				{title}
 			</Link>
-			<p className="text-gray-400 text-sm">
+			<p className="text-gray-400 text-sm mt-2">
 				{date.toLocaleDateString("en-US", {
 					day: "numeric",
 					month: "long",
