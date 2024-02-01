@@ -38,11 +38,6 @@ const PostPage = async ({ params: { slug } }: PostPageProps) => {
 				</ReactMarkdown>
 			</article>
 			<aside>
-				<iframe
-					src={`https://iqgpt-js-embedding.vercel.app/?api-key=${process.env.IQGPT_API_KEY}`}
-					className="w-full h-96"
-					title="IQGPT JS Embedding"
-				/>
 				<MorePosts filteredPosts={filteredPosts} />
 			</aside>
 		</main>
